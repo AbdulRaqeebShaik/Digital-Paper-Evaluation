@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Admin-DPE</title>
+   <script>
+    var logoutTimeout;
+
+    function resetLogoutTimer() {
+      clearTimeout(logoutTimeout);
+      logoutTimeout = setTimeout(logout, 120000); // 2 minutes in milliseconds
+    }
+
+    function logout() {
+      // Perform the logout operations here, such as clearing session data or redirecting to a login page.
+      // For this example, we will simply display an alert message.
+	document.location.href =  "index.html";
+      alert("You have been automatically logged out due to inactivity.");
+      // You can replace the alert above with the actual logout logic you want to execute.
+    }
+    function logout1() {
+      // Perform the logout operations here, such as clearing session data or redirecting to a login page.
+      // For this example, we will simply display an alert message.
+	document.location.href =  "index.html";
+      alert("You have succesfully logged out.");
+      // You can replace the alert above with the actual logout logic you want to execute.
+    }
+
+    document.addEventListener("mousemove", resetLogoutTimer);
+    document.addEventListener("keydown", resetLogoutTimer);
+    document.addEventListener("click", resetLogoutTimer);
+  </script>
+
+  </head>
+  <body>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    resetLogoutTimer(); // Start the initial timer
+  </script>
+<div class="text-center">
+  <img src="logo.png" class="rounded" alt="...">
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+        <ul class="navbar-nav">
+              <li class="nav-item">
+            <a class="nav-link"  href = "addanswerscripts.php" target="_blank">Add Answer Scripts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href = "adduser.html" target="_blank">Add User</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href = "addstudent.html" target="_blank">Add Student</a>
+          </li>
+       <li class="nav-item">
+            <a class="nav-link" href ="userdetail.php" target="_blank">User Details</a>
+          </li>
+<li class="nav-item">
+            <a class="nav-link" href = "studentmarks.php" target="_blank">Student Marks</a>
+          </li>
+<li class="nav-item">
+            <a class="nav-link" href = "studentdetails.php" target="_blank">Student Details</a>
+          </li>
+<li class="nav-item">
+            <a class="nav-link" href = "deleteUser.html" target="_blank">Delete User</a>
+          </li>
+   <li class="nav-item ms-auto">
+            <a class="nav-link" onclick="logout1()" >Logout</a>
+          </li>
+   </ul>   
+      </div>
+    </div>
+  </nav>	
+
+<br><Br><br>
+<main class="container">
+   <div
+           class="p-4 	 mb-4 border rounded	 bg-image card shadow-1-strong"
+           style="
+                  background-image: url('logo2.jpg');
+height: 50vh;
+                  "
+           >
+        <div class="card-body text-black">
+          <h5 class="card-title"><big><b>Digital Paper Evaluation</b></big></h5>
+          <p class="card-text">
+            Exam papers or evaluated marks can be missed accidentally. <br>To solve this, we automated the process of evaluation of exam papers and storing of marks using <br>an online application.<br> This stores softcopy of exam papers and also allotted marks in the database which can be accessed <br>anytime and anywhere.<br> It has separate access according to the role of user in the college/Institute. <br>Evaluation of papers by evaluators from various places can be done online,<br> which saves time, distance problems and evaluator availability, travel alliances, etc.
+          </p>
+        </div>
+      </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+  </body>
+</html>

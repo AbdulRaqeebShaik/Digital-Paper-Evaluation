@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Add User-DPE</title>
+<script>
+function add(){
+alert("Successfully Added to the records.");
+	document.location.href =  "adduser.html";
+}
+</script>
+
+  <script>
+    var logoutTimeout;
+
+    function resetLogoutTimer() {
+      clearTimeout(logoutTimeout);
+      logoutTimeout = setTimeout(logout, 120000); // 2 minutes in milliseconds
+    }
+
+    function logout() {
+      // Perform the logout operations here, such as clearing session data or redirecting to a login page.
+      // For this example, we will simply display an alert message.
+	document.location.href =  "index.html";
+
+      alert("You have been automatically logged out due to inactivity.");
+      // You can replace the alert above with the actual logout logic you want to execute.
+    }
+
+    document.addEventListener("mousemove", resetLogoutTimer);
+    document.addEventListener("keydown", resetLogoutTimer);
+    document.addEventListener("click", resetLogoutTimer);
+  </script>
+  </head>
+  <body>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    resetLogoutTimer(); // Start the initial timer
+  </script>
+ <div class="text-center">
+  <img src="logo.png" class="rounded" alt="...">
+</div>
+
+<div class="d-flex justify-content-center">
+	<form align="center" method="POST" action="reg.php">
+<b>First Name:</b>&emsp;
+<input type="text" name="fname">
+<br><br>
+<b>Last Name:</b>&emsp;
+<input type="text" name="lname">
+<br><br>
+<b>username/email:</b>&emsp;
+<input type="email" name="email">
+<br><br>
+<b>Password:</b>&emsp;
+<input type="password" name="pwd">
+<br><br>
+<b>Role:</b>&emsp;
+<input type="text" name="role">
+<br><br>
+<b>Gender:</b>&emsp;
+<input type="radio" name="gender" value="male" >
+<label>Male</label>
+<input type="radio" name="gender" value="female" >
+<label>Female</label>
+<input type="radio" name="gender" value="other" >
+<label>Other</label>
+<br><br>
+<b>Phone Number:</b>&emsp;
+<input type="number" name="phno">
+<br><br>
+<b>Designation:</b>&emsp;
+<input type="text" name="desg">
+<br><br>
+<b>Department:</b>&emsp;
+<input type="text" name="dept">
+<br><br>
+<b>Expertise:</b>&emsp;
+<input type="text" name="expt">
+<br>
+<br>
+<input type="submit" value="submit" onclick="add()">
+<input type="reset" name="clear">
+    </div>
+
+  </body>
+</html>

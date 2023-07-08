@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Delete User</title>
+<Script>
+function add(){
+alert("Successfully Added to the records.");
+	document.location.href =  "adduser.html";
+}
+</script>
+<Script>
+function del(){
+alert("Successfully Deleted.");
+	document.location.href =  "deleteUser.html";
+}
+</script>
+  <script>
+    var logoutTimeout;
+
+    function resetLogoutTimer() {
+      clearTimeout(logoutTimeout);
+      logoutTimeout = setTimeout(logout, 120000); // 2 minutes in milliseconds
+    }
+
+    function logout() {
+      // Perform the logout operations here, such as clearing session data or redirecting to a login page.
+      // For this example, we will simply display an alert message.
+	document.location.href =  "index.html";
+
+      alert("You have been automatically logged out due to inactivity.");
+      // You can replace the alert above with the actual logout logic you want to execute.
+    }
+
+    document.addEventListener("mousemove", resetLogoutTimer);
+    document.addEventListener("keydown", resetLogoutTimer);
+    document.addEventListener("click", resetLogoutTimer);
+  </script>
+  </head>
+  <body>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    resetLogoutTimer(); // Start the initial timer
+  </script>
+ <div class="text-center">
+  <img src="logo.png" class="rounded" alt="...">
+</div>
+
+
+	<center>
+    <h2>Delete User</h2>
+    <form action="deleteUser.php" method="POST">
+        
+        <b>email:</b>&emsp;
+	  <input type="email" name="email">
+		<br><br>
+        <input type="submit" value="Delete" onclick="del()">
+    </form>
+      
+
+</body></center>
+
+
+
+  </body>
+</html>
+
+
